@@ -1,0 +1,48 @@
+np.sqrt(a)
+np.exp(a)
+np.log(a)
+np.mean(a)
+np.median(a)
+np.std(a)
+np.sum(a)
+np.min(a)
+np.max(a)
+
+
+🧩 3️⃣ __init__() Constructor
+
+__init__() ek special method hota hai —
+
+
+
+//inheritance 
+# Parent class
+class Parent:
+    def show_parent(self):
+        print("I am Parent class")
+
+# Child class inheriting Parent
+class Child(Parent):
+    def show_child(self):
+        print("I am Child class")
+
+# Create object of Child
+obj = Child()
+obj.show_parent()  # ✅ from Parent
+obj.show_child()   # ✅ from Child
+
+3️⃣ __init__() in Inheritance
+class Parent:
+    def __init__(self, name):
+        self.name = name
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)  # 👈 parent constructor call
+        self.age = age
+
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+
+obj = Child("Nishu", 21)
+obj.display()
